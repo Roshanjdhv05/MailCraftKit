@@ -1,15 +1,15 @@
 {
-  "name": "email-platform",
+  "name": "mailcraftkit",
   "version": "1.0.0",
   "private": true,
-  "description": "DesignMailer - Email Template Builder & Sender MVP",
+  "description": "MailCraftKit - Visual & HTML Email Template Builder",
   "scripts": {
     "install:all": "npm install && npm --prefix server install && npm --prefix client install",
     "dev:server": "npm --prefix server run dev",
     "dev:client": "npm --prefix client run dev",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "build:server": "npm --prefix server run build",
-    "build:client": "npm --prefix client run build",
+    "build:server": "npm --prefix server install && npm --prefix server run build",
+    "build:client": "npm --prefix client install && npm --prefix client run build",
     "build": "npm run build:server && npm run build:client"
   },
   "devDependencies": {

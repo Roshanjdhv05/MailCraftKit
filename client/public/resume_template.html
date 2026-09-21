@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>{{name}} — {{role}}</title>
+
+<!--
+===========================================================
+RESUME EMAIL TEMPLATE VARIABLES & SAMPLE VALUES
+===========================================================
+
+HEADER & PERSONAL
+{{header_eyebrow}}          = APPLICATION · FULL STACK DEVELOPMENT
+{{name}}                    = Roshan Sunil Jadhav
+{{role}}                    = Full Stack Developer · Frontend Specialist
+{{phone}}                   = +91 7900127488
+{{email}}                   = roshanjdhv114@gmail.com
+{{location}}                = Thane, Maharashtra
+{{greeting}}                = Dear Hiring Manager,
+{{summary}}                 = Computer Application graduate with hands-on internship experience...
+
+PROFILE LINKS
+{{portfolio_url}}           = https://roshanjdhv.netlify.app
+{{portfolio_label}}         = Portfolio
+{{github_url}}              = https://github.com/Roshanjdhv
+{{github_label}}            = GitHub
+{{linkedin_url}}            = https://linkedin.com/in/roshanjdhv
+{{linkedin_label}}          = LinkedIn
+
+HIGHLIGHTS
+{{highlights_title}}        = At a Glance
+{{highlight_1_value}}       = 7.95
+{{highlight_1_label}}       = BCA CGPA
+{{highlight_2_value}}       = 6+
+{{highlight_2_label}}       = Client projects delivered
+{{highlight_3_value}}       = Full Stack
+{{highlight_3_label}}       = Frontend + Backend development
+
+CORE TECHNOLOGIES
+{{technologies_title}}      = Core Technologies
+{{tech_1_name}}             = HTML5
+{{tech_1_url}}              = https://developer.mozilla.org/en-US/docs/Web/HTML
+{{tech_1_icon}}             = https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg
+{{tech_1_alt}}              = HTML5
+
+{{tech_2_name}}             = CSS3
+{{tech_2_url}}              = https://developer.mozilla.org/en-US/docs/Web/CSS
+{{tech_2_icon}}             = https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg
+{{tech_2_alt}}              = CSS3
+
+{{tech_3_name}}             = JavaScript
+{{tech_3_url}}              = https://developer.mozilla.org/en-US/docs/Web/JavaScript
+{{tech_3_icon}}             = https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg
+{{tech_3_alt}}              = JavaScript
+
+{{tech_4_name}}             = React.js
+{{tech_4_url}}              = https://react.dev
+{{tech_4_icon}}             = https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg
+{{tech_4_alt}}              = React
+
+{{tech_5_name}}             = Next.js
+{{tech_5_url}}              = https://nextjs.org
+{{tech_5_icon}}             = https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg
+{{tech_5_alt}}              = Next.js
+
+{{tech_6_name}}             = Node.js
+{{tech_6_url}}              = https://nodejs.org
+{{tech_6_icon}}             = https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg
+{{tech_6_alt}}              = Node.js
+
+{{tech_7_name}}             = MongoDB
+{{tech_7_url}}              = https://mongodb.com
+{{tech_7_icon}}             = https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg
+{{tech_7_alt}}              = MongoDB
+
+{{tech_8_name}}             = Supabase
+{{tech_8_url}}              = https://supabase.com
+{{tech_8_icon}}             = https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg
+{{tech_8_alt}}              = Supabase
+
+{{skills_note}}             = Frontend: HTML5, CSS3... · Backend: Node.js, Express.js...
+
+SELECTED EXPERIENCE
+{{experience_section_title}}= Selected Experience
+{{experience_1_head}}       = Mulund College of Commerce — India
+{{experience_1_body}}       = Built the official college website from scratch using Next.js...
+{{experience_1_url}}        = https://mccmulund.ac.in
+{{experience_1_link_text}}  = mccmulund.ac.in
+
+{{experience_2_head}}       = RBZ Climate Solutions — Canada
+{{experience_2_body}}       = Built a full-featured booking website...
+{{experience_2_url}}        = https://rbzclimatesolutions.com
+{{experience_2_link_text}}  = rbzclimatesolutions.com
+
+{{experience_3_head}}       = Jay Gajanan Geotechnics — India
+{{experience_3_body}}       = Designed and developed a professional company website...
+{{experience_3_url}}        = https://jaygajanangeotechnics.com
+{{experience_3_link_text}}  = jaygajanangeotechnics.com
+
+RESUME
+{{resume_title}}            = Resume Attached — Roshan Sunil Jadhav
+{{resume_text}}             = Please find my resume attached for your consideration...
+{{resume_url}}              = https://roshanjdhv.netlify.app
+{{resume_link_text}}        = Download Resume
+
+CTA
+{{cta_text}}                = View Portfolio
+{{cta_url}}                 = https://roshanjdhv.netlify.app
+
+FOOTER
+{{footer_text}}             = Thank you for your time and consideration.
+===========================================================
+-->
+
+<style>
+
+html,
+body{
+  margin:0!important;
+  padding:0!important;
+  width:100%!important;
+  background:#eef3f8;
+}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:#172033;
+  -webkit-text-size-adjust:100%;
+  -ms-text-size-adjust:100%;
+}
+
+table{
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+td{
+  border-collapse:collapse;
+}
+
+img{
+  border:0;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+}
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.canvas{
+  width:100%;
+  background:#eef3f8;
+}
+
+.card{
+  width:700px;
+  max-width:calc(100% - 32px);
+  margin:28px auto;
+  background:#fff;
+  border:1px solid #dce4ed;
+  border-radius:18px;
+  overflow:hidden;
+}
+
+.topline{
+  height:5px;
+  background:#173b68;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+  padding:30px 38px 26px;
+  background:linear-gradient(
+    135deg,
+    #f8fbff 0%,
+    #edf4fb 100%
+  );
+}
+
+.eyebrow{
+  font-size:10px;
+  line-height:1.2;
+  font-weight:800;
+  letter-spacing:2.2px;
+  text-transform:uppercase;
+  color:#52739a;
+  margin:0 0 10px;
+}
+
+.name{
+  font-size:30px;
+  line-height:1.12;
+  font-weight:800;
+  letter-spacing:-.7px;
+  color:#173b68;
+  margin:0;
+
+  text-shadow:
+    0 0 5px rgba(73,137,202,.25),
+    0 0 12px rgba(73,137,202,.18);
+}
+
+.role{
+  font-size:14px;
+  line-height:1.5;
+  font-weight:700;
+  color:#315b85;
+  margin:7px 0 17px;
+}
+
+.contact{
+  font-size:11px;
+  line-height:1.8;
+  color:#5e6b7b;
+}
+
+/* =========================================================
+   CLICKABLE LINK GLOW
+========================================================= */
+
+.glow-link{
+  color:#1769aa!important;
+  font-weight:800;
+
+  text-shadow:
+    0 0 4px rgba(23,105,170,.22);
+
+  border-bottom:1px solid rgba(23,105,170,.35);
+  padding-bottom:1px;
+
+  transition:
+    color .2s ease,
+    text-shadow .2s ease,
+    border-color .2s ease;
+}
+
+.glow-link:hover{
+  color:#0b4f85!important;
+
+  text-shadow:
+    0 0 5px rgba(23,105,170,.45),
+    0 0 12px rgba(23,105,170,.25);
+
+  border-bottom-color:#1769aa;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro{
+  padding:28px 38px 12px;
+}
+
+.hello{
+  font-size:20px;
+  line-height:1.3;
+  font-weight:750;
+  color:#172b45;
+  margin:0 0 12px;
+}
+
+.copy{
+  font-size:13px;
+  line-height:1.72;
+  color:#536174;
+  margin:0;
+}
+
+/* =========================================================
+   HIGHLIGHTS
+========================================================= */
+
+.highlight{
+  padding:18px 38px 12px;
+}
+
+.highlight-title,
+.section-title{
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.7px;
+  text-transform:uppercase;
+  color:#6c7e93;
+  margin:0 0 10px;
+}
+
+.highlight-table{
+  width:100%;
+}
+
+.item{
+  width:33.33%;
+  padding:14px 12px;
+  background:#f7f9fc;
+  border:1px solid #e5ebf2;
+  vertical-align:top;
+}
+
+.item:first-child{
+  border-radius:10px 0 0 10px;
+}
+
+.item:last-child{
+  border-radius:0 10px 10px 0;
+}
+
+.item strong{
+  display:block;
+  font-size:18px;
+  line-height:1.2;
+  color:#173b68;
+  margin-bottom:4px;
+}
+
+.item span{
+  font-size:10px;
+  line-height:1.4;
+  color:#6c7787;
+}
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.section{
+  padding:14px 38px;
+}
+
+/* =========================================================
+   CORE TECHNOLOGIES
+========================================================= */
+
+.skills-table{
+  width:100%;
+}
+
+.skill-cell{
+  width:25%;
+  padding:7px 5px;
+  vertical-align:top;
+}
+
+.skill-card{
+  display:block;
+  min-height:76px;
+  padding:12px 8px;
+
+  background:#f8fafc;
+
+  border:1px solid #b8d0e8;
+  border-radius:11px;
+
+  text-align:center;
+
+  /*
+    Static glow makes the card visibly clickable
+    even in email clients that do not support :hover.
+  */
+  box-shadow:
+    0 0 0 1px rgba(23,105,170,.05),
+    0 0 10px rgba(23,105,170,.08);
+
+  transition:
+    all .25s ease;
+}
+
+.skill-card:hover{
+  background:#edf5ff;
+  border-color:#6e9dcc;
+
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 0 0 1px rgba(23,105,170,.15),
+    0 8px 20px rgba(23,59,104,.12),
+    0 0 18px rgba(23,105,170,.18);
+}
+
+.skill-icon{
+  width:34px;
+  height:34px;
+  margin:0 auto 7px;
+  border-radius:8px;
+  object-fit:contain;
+}
+
+.skill-name{
+  font-size:10px;
+  line-height:1.25;
+  font-weight:750;
+  color:#29435f;
+}
+
+.skills-note{
+  font-size:10px;
+  line-height:1.5;
+  color:#7a8695;
+  margin:10px 0 0;
+}
+
+/* =========================================================
+   SELECTED EXPERIENCE
+========================================================= */
+
+.project-table{
+  width:100%;
+}
+
+.project{
+  padding:14px 0;
+  border-top:1px solid #edf0f4;
+  vertical-align:top;
+}
+
+.project-name{
+  font-size:12px;
+  font-weight:800;
+  color:#1c3656;
+  margin:0 0 5px;
+}
+
+.project-desc{
+  font-size:11px;
+  line-height:1.55;
+  color:#657183;
+  margin:0 0 7px;
+}
+
+.project-link{
+  display:inline-block;
+
+  font-size:10px;
+  font-weight:800;
+
+  color:#1769aa!important;
+
+  padding:4px 8px;
+
+  background:#eef7ff;
+
+  border:1px solid #a9c9e6;
+  border-radius:6px;
+
+  text-shadow:
+    0 0 4px rgba(23,105,170,.18);
+
+  box-shadow:
+    0 0 8px rgba(23,105,170,.10);
+
+  transition:
+    all .2s ease;
+}
+
+.project-link:hover{
+  background:#e2f1ff;
+
+  border-color:#4d8cc2;
+
+  box-shadow:
+    0 0 10px rgba(23,105,170,.22),
+    0 4px 12px rgba(23,105,170,.10);
+
+  transform:translateY(-1px);
+}
+
+/* =========================================================
+   RESUME ATTACHMENT
+========================================================= */
+
+.attachment{
+  margin:10px 38px 20px;
+  padding:16px 18px;
+
+  background:#f7f9fc;
+
+  border:1px solid #dfe7ef;
+  border-radius:12px;
+}
+
+.attachment-title{
+  font-size:12px;
+  font-weight:800;
+  color:#1d3553;
+  margin:0 0 4px;
+}
+
+.attachment-text{
+  font-size:10px;
+  line-height:1.5;
+  color:#6b7787;
+  margin:0 0 8px;
+}
+
+.resume-link{
+  display:inline-block;
+
+  font-size:10px;
+  font-weight:800;
+
+  color:#1769aa!important;
+
+  padding:5px 9px;
+
+  background:#edf6ff;
+
+  border:1px solid #9fc3e4;
+  border-radius:6px;
+
+  box-shadow:
+    0 0 9px rgba(23,105,170,.12);
+
+  text-shadow:
+    0 0 4px rgba(23,105,170,.20);
+}
+
+.resume-link:hover{
+  box-shadow:
+    0 0 15px rgba(23,105,170,.25);
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta-row{
+  padding:4px 38px 30px;
+  text-align:center;
+}
+
+.cta{
+  display:inline-block;
+
+  background:#173b68;
+  color:#fff!important;
+
+  border-radius:8px;
+
+  padding:12px 23px;
+
+  font-size:12px;
+  font-weight:750;
+
+  box-shadow:
+    0 0 0 1px rgba(23,59,104,.12),
+    0 0 14px rgba(23,105,170,.20);
+
+  transition:all .2s ease;
+}
+
+.cta:hover{
+  background:#244f80;
+
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 0 0 1px rgba(23,105,170,.20),
+    0 0 22px rgba(23,105,170,.35),
+    0 8px 18px rgba(23,59,104,.15);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer{
+  padding:20px 38px;
+
+  background:#f7f9fc;
+
+  border-top:1px solid #e6ebf1;
+
+  text-align:center;
+}
+
+.footer-name{
+  font-size:11px;
+  font-weight:800;
+  color:#30425a;
+  margin:0 0 4px;
+}
+
+.footer-text{
+  font-size:9px;
+  line-height:1.5;
+  color:#7a8695;
+  margin:0;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media only screen and (max-width:700px){
+
+  .card{
+    width:100%!important;
+    max-width:calc(100% - 18px)!important;
+    margin:10px auto!important;
+    border-radius:14px!important;
+  }
+
+  .header,
+  .intro,
+  .highlight,
+  .section{
+    padding-left:20px!important;
+    padding-right:20px!important;
+  }
+
+  .attachment{
+    margin-left:20px!important;
+    margin-right:20px!important;
+  }
+
+  .cta-row{
+    padding-left:20px!important;
+    padding-right:20px!important;
+  }
+
+  .name{
+    font-size:26px!important;
+  }
+
+  .item{
+    display:block!important;
+    width:auto!important;
+    border-radius:8px!important;
+    margin-bottom:7px;
+    padding:12px!important;
+  }
+
+  .contact{
+    font-size:10px!important;
+  }
+
+  .hello{
+    font-size:18px!important;
+  }
+
+  .copy{
+    font-size:12px!important;
+  }
+
+  .project-desc{
+    font-size:10px!important;
+  }
+
+  .skill-cell{
+    width:50%!important;
+  }
+
+  .skill-card{
+    min-height:70px!important;
+  }
+
+}
+
+@media only screen and (max-width:380px){
+
+  .header,
+  .intro,
+  .highlight,
+  .section{
+    padding-left:15px!important;
+    padding-right:15px!important;
+  }
+
+  .attachment{
+    margin-left:15px!important;
+    margin-right:15px!important;
+  }
+
+  .skill-name{
+    font-size:9px!important;
+  }
+
+}
+
+
+/* =========================================================
+   ADVANCED TEXT + LINK ANIMATIONS
+   Designed to stay email-safe: CSS only, no JavaScript.
+========================================================= */
+
+/* --- Header eyebrow: typewriter reveal --- */
+.eyebrow{
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+  max-width:100%;
+  animation:
+    eyebrowTyping 1.4s steps(32,end) .15s both,
+    eyebrowGlow 3s ease-in-out 1.6s infinite;
+}
+
+@keyframes eyebrowTyping{
+  from{
+    max-width:0;
+    opacity:0;
+  }
+  to{
+    max-width:100%;
+    opacity:1;
+  }
+}
+
+@keyframes eyebrowGlow{
+  0%,100%{
+    text-shadow:0 0 0 rgba(82,115,154,0);
+  }
+  50%{
+    text-shadow:
+      0 0 5px rgba(82,115,154,.30),
+      0 0 12px rgba(82,115,154,.12);
+  }
+}
+
+
+/* --- Name: typewriter + glow --- */
+.name{
+  display:block;
+  overflow:hidden;
+  white-space:nowrap;
+  max-width:100%;
+  animation:
+    nameTyping 1.7s steps(30,end) .35s both,
+    nameGlow 3s ease-in-out 2s infinite;
+}
+
+@keyframes nameTyping{
+  from{
+    max-width:0;
+    opacity:0;
+  }
+  to{
+    max-width:100%;
+    opacity:1;
+  }
+}
+
+@keyframes nameGlow{
+  0%,100%{
+    text-shadow:
+      0 0 4px rgba(73,137,202,.18),
+      0 0 9px rgba(73,137,202,.10);
+  }
+  50%{
+    text-shadow:
+      0 0 6px rgba(73,137,202,.42),
+      0 0 16px rgba(73,137,202,.28),
+      0 0 28px rgba(73,137,202,.12);
+  }
+}
+
+
+/* --- Role: typewriter reveal --- */
+.role{
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+  max-width:100%;
+  animation:roleTyping 1.5s steps(42,end) 1.55s both;
+}
+
+@keyframes roleTyping{
+  from{
+    max-width:0;
+    opacity:0;
+    transform:translateY(4px);
+  }
+  to{
+    max-width:100%;
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+/* --- Contact links: staggered glow --- */
+.contact .glow-link{
+  display:inline-block;
+  animation:contactLinkGlow 2.8s ease-in-out infinite;
+}
+
+.contact .glow-link:nth-of-type(1){animation-delay:2.9s}
+.contact .glow-link:nth-of-type(2){animation-delay:3.1s}
+.contact .glow-link:nth-of-type(3){animation-delay:3.3s}
+.contact .glow-link:nth-of-type(4){animation-delay:3.5s}
+.contact .glow-link:nth-of-type(5){animation-delay:3.7s}
+
+@keyframes contactLinkGlow{
+  0%,100%{
+    text-shadow:0 0 3px rgba(23,105,170,.12);
+  }
+  50%{
+    text-shadow:
+      0 0 5px rgba(23,105,170,.42),
+      0 0 12px rgba(23,105,170,.20);
+  }
+}
+
+
+/* --- Greeting: fade + slide --- */
+.hello{
+  animation:helloReveal .8s ease-out 3s both;
+}
+
+@keyframes helloReveal{
+  from{
+    opacity:0;
+    transform:translateY(8px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+/* --- Summary: writing/reveal effect --- */
+.copy{
+  overflow:hidden;
+  animation:summaryReveal 1.4s ease-out 3.2s both;
+}
+
+@keyframes summaryReveal{
+  from{
+    opacity:0;
+    clip-path:inset(0 100% 0 0);
+  }
+  to{
+    opacity:1;
+    clip-path:inset(0 0 0 0);
+  }
+}
+
+
+/* --- Section labels: shimmer --- */
+.section-title,
+.highlight-title{
+  position:relative;
+  animation:titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow{
+  0%,100%{
+    opacity:.78;
+    text-shadow:0 0 0 rgba(23,105,170,0);
+  }
+  50%{
+    opacity:1;
+    text-shadow:
+      0 0 5px rgba(23,105,170,.30),
+      0 0 12px rgba(23,105,170,.12);
+  }
+}
+
+
+/* --- Highlight cards: staggered entrance --- */
+.item{
+  animation:cardReveal .65s ease-out both;
+}
+
+.item:nth-child(1){animation-delay:.15s}
+.item:nth-child(2){animation-delay:.35s}
+.item:nth-child(3){animation-delay:.55s}
+
+@keyframes cardReveal{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+/* --- Technology cards: staggered floating glow --- */
+.skill-card{
+  animation:skillPulse 3.5s ease-in-out infinite;
+}
+
+.skill-cell:nth-child(1) .skill-card{animation-delay:.15s}
+.skill-cell:nth-child(2) .skill-card{animation-delay:.30s}
+.skill-cell:nth-child(3) .skill-card{animation-delay:.45s}
+.skill-cell:nth-child(4) .skill-card{animation-delay:.60s}
+
+@keyframes skillPulse{
+  0%,100%{
+    box-shadow:
+      0 0 0 1px rgba(23,105,170,.05),
+      0 0 10px rgba(23,105,170,.08);
+  }
+  50%{
+    box-shadow:
+      0 0 0 1px rgba(23,105,170,.10),
+      0 0 17px rgba(23,105,170,.18);
+  }
+}
+
+
+/* --- Technology names: subtle text shimmer --- */
+.skill-name{
+  transition:all .2s ease;
+}
+
+.skill-card:hover .skill-name{
+  text-shadow:
+    0 0 5px rgba(23,105,170,.30);
+}
+
+
+/* --- Experience entries: reveal one by one --- */
+.project{
+  animation:projectReveal .75s ease-out both;
+}
+
+.project:nth-child(1){animation-delay:.25s}
+.project:nth-child(2){animation-delay:.50s}
+.project:nth-child(3){animation-delay:.75s}
+
+@keyframes projectReveal{
+  from{
+    opacity:0;
+    transform:translateX(-10px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+
+/* --- Live project links: noticeable pulse --- */
+.project-link{
+  animation:projectLinkPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes projectLinkPulse{
+  0%,100%{
+    box-shadow:
+      0 0 7px rgba(23,105,170,.08);
+  }
+  50%{
+    box-shadow:
+      0 0 12px rgba(23,105,170,.25),
+      0 0 20px rgba(23,105,170,.10);
+  }
+}
+
+
+/* --- Resume link --- */
+.resume-link{
+  animation:resumePulse 3s ease-in-out infinite;
+}
+
+@keyframes resumePulse{
+  0%,100%{
+    box-shadow:0 0 7px rgba(23,105,170,.08);
+  }
+  50%{
+    box-shadow:
+      0 0 14px rgba(23,105,170,.28),
+      0 0 22px rgba(23,105,170,.10);
+  }
+}
+
+
+/* --- CTA: strongest attention animation --- */
+.cta{
+  animation:ctaPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes ctaPulse{
+  0%,100%{
+    box-shadow:
+      0 0 0 1px rgba(23,59,104,.12),
+      0 0 12px rgba(23,105,170,.16);
+  }
+  50%{
+    box-shadow:
+      0 0 0 1px rgba(23,105,170,.22),
+      0 0 20px rgba(23,105,170,.34),
+      0 0 32px rgba(23,105,170,.12);
+  }
+}
+
+.cta:hover{
+  letter-spacing:.3px;
+}
+
+
+/* --- Footer fade-in --- */
+.footer{
+  animation:footerReveal 1s ease-out 1s both;
+}
+
+@keyframes footerReveal{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+
+/* --- Accessibility / email-client fallback --- */
+@media (prefers-reduced-motion:reduce){
+  .eyebrow,
+  .name,
+  .role,
+  .glow-link,
+  .hello,
+  .copy,
+  .section-title,
+  .highlight-title,
+  .item,
+  .skill-card,
+  .project,
+  .project-link,
+  .resume-link,
+  .cta,
+  .footer{
+    animation:none!important;
+  }
+}
+
+/* Some email clients don't support clip-path.
+   The text remains visible because the animation is progressive. */
+@media only screen and (max-width:700px){
+  .name,
+  .role,
+  .eyebrow{
+    white-space:normal!important;
+    max-width:100%!important;
+  }
+}
+
+
+/* Typewriter cursor accent */
+.name::after,
+.role::after,
+.eyebrow::after{
+  content:"";
+  display:inline-block;
+  width:2px;
+  height:.9em;
+  margin-left:4px;
+  vertical-align:-.08em;
+  background:#4d8cc2;
+  animation:typingCursor .7s steps(1) infinite;
+}
+
+@keyframes typingCursor{
+  0%,49%{opacity:1}
+  50%,100%{opacity:0}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .name::after,
+  .role::after,
+  .eyebrow::after{
+    display:none;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<table
+  role="presentation"
+  width="100%"
+  class="canvas"
+  cellpadding="0"
+  cellspacing="0"
+  border="0"
+>
+
+<tr>
+<td align="center" valign="top">
+
+<table
+  role="presentation"
+  class="card"
+  cellpadding="0"
+  cellspacing="0"
+  border="0"
+>
+
+<!-- TOP LINE -->
+<tr>
+<td class="topline"></td>
+</tr>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<tr>
+<td class="header">
+
+  <p class="eyebrow">
+    {{header_eyebrow}}
+  </p>
+
+  <h1 class="name">
+    {{name}}
+  </h1>
+
+  <p class="role">
+    {{role}}
+  </p>
+
+  <div class="contact">
+
+    <a
+      class="glow-link"
+      href="tel:{{phone}}"
+    >
+      {{phone}}
+    </a>
+
+    ·
+
+    <a
+      class="glow-link"
+      href="mailto:{{email}}"
+    >
+      {{email}}
+    </a>
+
+    <br>
+
+    <a
+      class="glow-link"
+      href="{{portfolio_url}}"
+    >
+      {{portfolio_label}}
+    </a>
+
+    ·
+
+    <a
+      class="glow-link"
+      href="{{github_url}}"
+    >
+      {{github_label}}
+    </a>
+
+    ·
+
+    <a
+      class="glow-link"
+      href="{{linkedin_url}}"
+    >
+      {{linkedin_label}}
+    </a>
+
+    · {{location}}
+
+  </div>
+
+</td>
+</tr>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<tr>
+<td class="intro">
+
+  <h2 class="hello">
+    {{greeting}}
+  </h2>
+
+  <p class="copy">
+    {{summary}}
+  </p>
+
+</td>
+</tr>
+
+
+<!-- =====================================================
+     HIGHLIGHTS
+===================================================== -->
+
+<tr>
+<td class="highlight">
+
+  <p class="highlight-title">
+    {{highlights_title}}
+  </p>
+
+  <table
+    role="presentation"
+    class="highlight-table"
+    cellpadding="0"
+    cellspacing="0"
+    border="0"
+  >
+
+    <tr>
+
+      <td class="item">
+
+        <strong>
+          {{highlight_1_value}}
+        </strong>
+
+        <span>
+          {{highlight_1_label}}
+        </span>
+
+      </td>
+
+
+      <td class="item">
+
+        <strong>
+          {{highlight_2_value}}
+        </strong>
+
+        <span>
+          {{highlight_2_label}}
+        </span>
+
+      </td>
+
+
+      <td class="item">
+
+        <strong>
+          {{highlight_3_value}}
+        </strong>
+
+        <span>
+          {{highlight_3_label}}
+        </span>
+
+      </td>
+
+    </tr>
+
+  </table>
+
+</td>
+</tr>
+
+
+<!-- =====================================================
+     CORE TECHNOLOGIES
+===================================================== -->
+
+<tr>
+<td class="section">
+
+  <p class="section-title">
+    {{technologies_title}}
+  </p>
+
+
+  <table
+    role="presentation"
+    class="skills-table"
+    cellpadding="0"
+    cellspacing="0"
+    border="0"
+  >
+
+    <!-- ROW 1 -->
+
+    <tr>
+
+      <td class="skill-cell">
+
+        <a
+          class="skill-card"
+          href="{{tech_1_url}}"
+        >
+
+          <img
+            class="skill-icon"
+            alt="{{tech_1_alt}}"
+            src="{{tech_1_icon}}"
+          >
+
+          <span class="skill-name">
+            {{tech_1_name}}
+          </span>
+
+        </a>
+
+      </td>
+
+
+      <td class="skill-cell">
+
+        <a
+          class="skill-card"
+          href="{{tech_2_url}}"
+        >
+
+          <img
+            class="skill-icon"
+            alt="{{tech_2_alt}}"
+            src="{{tech_2_icon}}"
+          >
+
+          <span class="skill-name">
+            {{tech_2_name}}
+          </span>
+
+        </a>
+
+      </td>
+
+
+      <td class="skill-cell">
+
+        <a
+          class="skill-card"
+          href="{{tech_3_url}}"
+        >
+
+          <img
+            class="skill-icon"
+            alt="{{tech_3_alt}}"
+            src="{{tech_3_icon}}"
+          >
+
+          <span class="skill-name">
+            {{tech_3_name}}
+          </span>
+
+        </a>
+
+      </td>
+
+
+      <td class="skill-cell">
+
+        <a
+          class="skill-card"
+          href="{{tech_4_url}}"
+        >
+
+          <img
+            class="skill-icon"
+            alt="{{tech_4_alt}}"
+            src="{{tech_4_icon}}"
+          >
+
+          <span class="skill-name">
+            {{tech_4_name}}
+          </span>
+
+        </a>
+
+      </td>
+
+    </tr>
+
+
+    <!-- ROW 2 -->
+
+    <tr>
+
+      <td class="skill-cell">
+
+        <a
+          class="skill-card"
+          href="{{tech_5_url}}"
+        >
+
+          <img
+            class="skill-icon"
+            alt="{{tech_5_alt}}"
+            src="{{tech_5_icon}}"
+          >
+
+          <span class="skill-name">
+            {{tech_5_name}}
+          </span>
+
+        </a>
+
+      </td>
+
+
+      <td class="skill-cell">
+
+        <a
+          class="skill-card"
+          href="{{tech_6_url}}"
+        >
+
+          <img
+            class="skill-icon"
+            alt="{{tech_6_alt}}"
+            src="{{tech_6_icon}}"
+          >
+
+          <span class="skill-name">
+            {{tech_6_name}}
+          </span>
+
+        </a>
+
+      </td>
+
+
+      <td class="skill-cell">
+
+        <a
+          class="skill-card"
+          href="{{tech_7_url}}"
+        >
+
+          <img
+            class="skill-icon"
+            alt="{{tech_7_alt}}"
+            src="{{tech_7_icon}}"
+          >
+
+          <span class="skill-name">
+            {{tech_7_name}}
+          </span>
+
+        </a>
+
+      </td>
+
+
+      <td class="skill-cell">
+
+        <a
+          class="skill-card"
+          href="{{tech_8_url}}"
+        >
+
+          <img
+            class="skill-icon"
+            alt="{{tech_8_alt}}"
+            src="{{tech_8_icon}}"
+          >
+
+          <span class="skill-name">
+            {{tech_8_name}}
+          </span>
+
+        </a>
+
+      </td>
+
+    </tr>
+
+  </table>
+
+
+  <p class="skills-note">
+    {{skills_note}}
+  </p>
+
+</td>
+</tr>
+
+
+<!-- =====================================================
+     SELECTED EXPERIENCE
+===================================================== -->
+
+<tr>
+<td class="section">
+
+  <p class="section-title">
+    {{experience_section_title}}
+  </p>
+
+
+  <table
+    role="presentation"
+    class="project-table"
+    cellpadding="0"
+    cellspacing="0"
+    border="0"
+  >
+
+
+    <!-- EXPERIENCE 1 -->
+
+    <tr>
+      <td class="project">
+
+        <p class="project-name">
+          {{experience_1_head}}
+        </p>
+
+        <p class="project-desc">
+          {{experience_1_body}}
+        </p>
+
+        <a
+          class="project-link"
+          href="{{experience_1_url}}"
+        >
+          {{experience_1_link_text}} →
+        </a>
+
+      </td>
+    </tr>
+
+
+    <!-- EXPERIENCE 2 -->
+
+    <tr>
+      <td class="project">
+
+        <p class="project-name">
+          {{experience_2_head}}
+        </p>
+
+        <p class="project-desc">
+          {{experience_2_body}}
+        </p>
+
+        <a
+          class="project-link"
+          href="{{experience_2_url}}"
+        >
+          {{experience_2_link_text}} →
+        </a>
+
+      </td>
+    </tr>
+
+
+    <!-- EXPERIENCE 3 -->
+
+    <tr>
+      <td class="project">
+
+        <p class="project-name">
+          {{experience_3_head}}
+        </p>
+
+        <p class="project-desc">
+          {{experience_3_body}}
+        </p>
+
+        <a
+          class="project-link"
+          href="{{experience_3_url}}"
+        >
+          {{experience_3_link_text}} →
+        </a>
+
+      </td>
+    </tr>
+
+
+  </table>
+
+</td>
+</tr>
+
+
+<!-- =====================================================
+     RESUME
+===================================================== -->
+
+<tr>
+<td class="attachment">
+
+  <p class="attachment-title">
+    {{resume_title}}
+  </p>
+
+  <p class="attachment-text">
+    {{resume_text}}
+  </p>
+
+  <a
+    class="resume-link"
+    href="{{resume_url}}"
+  >
+    {{resume_link_text}} →
+  </a>
+
+</td>
+</tr>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<tr>
+<td class="cta-row">
+
+  <a
+    class="cta"
+    href="{{cta_url}}"
+  >
+    {{cta_text}} →
+  </a>
+
+</td>
+</tr>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<tr>
+<td class="footer">
+
+  <p class="footer-name">
+    {{name}} · {{role}}
+  </p>
+
+  <p class="footer-text">
+    {{footer_text}}
+  </p>
+
+</td>
+</tr>
+
+
+</table>
+
+</td>
+</tr>
+
+</table>
+
+</body>
+</html>

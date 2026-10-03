@@ -49,7 +49,13 @@ app.use('/api/gif', gifRoutes);
 // Global Error Handler
 app.use(errorHandler);
 
-app.listen(PORT, () => {
-  console.log(`🚀 MailCraftKit Server running on port ${PORT}`);
-  console.log(`🔗 Health Check: http://localhost:${PORT}/api/health`);
-});
+// Export for Vercel serverless
+export default app;
+
+// Start server when not running in a serverless environment
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`🚀 MailCraftKit Server running on port ${PORT}`);
+    console.log(`🔗 Health Check: http://localhost:${PORT}/api/health`);
+  });
+}

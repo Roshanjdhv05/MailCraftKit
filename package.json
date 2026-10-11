@@ -29,12 +29,16 @@
     "juice": "^10.0.0",
     "multer": "^2.4.0",
     "nodemailer": "^6.9.13",
-    "sanitize-html": "^2.13.0",
+    "sanitize-html": "2.11.0",
     "xlsx": "^0.18.5",
     "zod": "^3.22.4"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
     "typescript": "^5.4.5"
+  },
+  "overrides": {
+    "sanitize-html": "2.11.0",
+    "htmlparser2": "8.0.2"
   }
 }

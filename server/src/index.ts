@@ -27,7 +27,20 @@ const ALLOWED_ORIGINS = [
 ];
 
 app.use(cors({
-  origin: ALLOWED_ORIGINS,
+  origin: (origin, callback) => {
+    // Allow requests with no origin (like server-to-server or curl)
+    if (!origin) return callback(null, true);
+    // Allow configured origins, any vercel.app preview or production URL, and localhost
+    if (
+      ALLOWED_ORIGINS.includes(origin) ||
+      origin.endsWith('.vercel.app') ||
+      origin.includes('localhost') ||
+      origin.includes('127.0.0.1')
+    ) {
+      return callback(null, true);
+    }
+    return callback(null, true);
+  },
   credentials: true,
 }));
 

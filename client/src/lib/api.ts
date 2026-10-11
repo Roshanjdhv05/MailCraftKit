@@ -1,7 +1,18 @@
 import { supabase, isSupabaseConfigured } from './supabase';
 import { ApiResponse, Template, EmailLog } from '../types';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
+const getApiBaseUrl = (): string => {
+  const envUrl = import.meta.env.VITE_API_URL;
+  // If running on a deployed website and VITE_API_URL points to localhost, fall back to relative '/api'
+  if (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+    if (!envUrl || envUrl.includes('localhost') || envUrl.includes('127.0.0.1')) {
+      return '/api';
+    }
+  }
+  return envUrl || '/api';
+};
+
+const API_BASE_URL = getApiBaseUrl();
 
 const getAuthHeaders = async (): Promise<Record<string, string>> => {
   const headers: Record<string, string> = {

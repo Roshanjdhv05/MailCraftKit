@@ -14,6 +14,20 @@ const getApiBaseUrl = (): string => {
 
 const API_BASE_URL = getApiBaseUrl();
 
+// Safe JSON parser — prevents "Unexpected token" crash when server returns HTML error pages
+const safeJson = async (res: Response): Promise<any> => {
+  const contentType = res.headers.get('content-type') || '';
+  if (contentType.includes('application/json')) {
+    return res.json();
+  }
+  // Server returned a non-JSON response (HTML error page, plain text, etc.)
+  const text = await res.text();
+  return {
+    success: false,
+    message: `Server error (${res.status}): ${text.slice(0, 200)}`,
+  };
+};
+
 const getAuthHeaders = async (): Promise<Record<string, string>> => {
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
@@ -43,20 +57,20 @@ export const api = {
   // Check health
   async checkHealth(): Promise<ApiResponse> {
     const res = await fetch(`${API_BASE_URL}/health`);
-    return res.json();
+    return safeJson(res);
   },
 
   // Templates API
   async getTemplates(): Promise<ApiResponse<Template[]>> {
     const headers = await getAuthHeaders();
     const res = await fetch(`${API_BASE_URL}/templates`, { headers });
-    return res.json();
+    return safeJson(res);
   },
 
   async getTemplateById(id: string): Promise<ApiResponse<Template>> {
     const headers = await getAuthHeaders();
     const res = await fetch(`${API_BASE_URL}/templates/${id}`, { headers });
-    return res.json();
+    return safeJson(res);
   },
 
   async createTemplate(payload: { name: string; description?: string; html: string; thumbnail_url?: string }): Promise<ApiResponse<Template>> {
@@ -66,7 +80,7 @@ export const api = {
       headers,
       body: JSON.stringify(payload),
     });
-    return res.json();
+    return safeJson(res);
   },
 
   async updateTemplate(id: string, payload: { name: string; description?: string; html: string; thumbnail_url?: string }): Promise<ApiResponse<Template>> {
@@ -76,7 +90,7 @@ export const api = {
       headers,
       body: JSON.stringify(payload),
     });
-    return res.json();
+    return safeJson(res);
   },
 
   async deleteTemplate(id: string): Promise<ApiResponse> {
@@ -85,7 +99,7 @@ export const api = {
       method: 'DELETE',
       headers,
     });
-    return res.json();
+    return safeJson(res);
   },
 
   async duplicateTemplate(id: string): Promise<ApiResponse<Template>> {
@@ -94,7 +108,7 @@ export const api = {
       method: 'POST',
       headers,
     });
-    return res.json();
+    return safeJson(res);
   },
 
   // Import API
@@ -105,7 +119,7 @@ export const api = {
       headers,
       body: JSON.stringify(payload),
     });
-    return res.json();
+    return safeJson(res);
   },
 
   // Email Sending API
@@ -116,7 +130,7 @@ export const api = {
       headers,
       body: JSON.stringify(payload),
     });
-    return res.json();
+    return safeJson(res);
   },
 
   async sendTestEmail(payload: { to: string; fromEmail?: string; fromName?: string; subject: string; html: string; variables?: Record<string, string> }): Promise<ApiResponse> {
@@ -126,7 +140,7 @@ export const api = {
       headers,
       body: JSON.stringify(payload),
     });
-    return res.json();
+    return safeJson(res);
   },
 
   async sendEmail(payload: { to: string; fromEmail?: string; fromName?: string; subject: string; templateId?: string; html?: string; variables?: Record<string, string> }): Promise<ApiResponse> {
@@ -136,26 +150,26 @@ export const api = {
       headers,
       body: JSON.stringify(payload),
     });
-    return res.json();
+    return safeJson(res);
   },
 
   async getEmailHistory(): Promise<ApiResponse<EmailLog[]>> {
     const headers = await getAuthHeaders();
     const res = await fetch(`${API_BASE_URL}/email/history`, { headers });
-    return res.json();
+    return safeJson(res);
   },
 
   async getEmailLogById(id: string): Promise<ApiResponse<EmailLog>> {
     const headers = await getAuthHeaders();
     const res = await fetch(`${API_BASE_URL}/email/history/${id}`, { headers });
-    return res.json();
+    return safeJson(res);
   },
 
   // Profile & SMTP API
   async getProfile(): Promise<ApiResponse<any>> {
     const headers = await getAuthHeaders();
     const res = await fetch(`${API_BASE_URL}/profile`, { headers });
-    return res.json();
+    return safeJson(res);
   },
 
   async updateSmtpSettings(payload: {
@@ -176,7 +190,7 @@ export const api = {
       headers,
       body: JSON.stringify(payload),
     });
-    return res.json();
+    return safeJson(res);
   },
 
   // Auth API
@@ -186,7 +200,7 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
     });
-    return res.json();
+    return safeJson(res);
   },
 
   async signIn(payload: { email: string; password: string }): Promise<ApiResponse<any>> {
@@ -195,7 +209,7 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
     });
-    return res.json();
+    return safeJson(res);
   },
 
   // Bulk Email API
@@ -209,7 +223,7 @@ export const api = {
       headers,
       body: formData,
     });
-    return res.json();
+    return safeJson(res);
   },
 
   async sendBulkEmails(payload: {
@@ -227,26 +241,26 @@ export const api = {
       headers,
       body: JSON.stringify(payload),
     });
-    return res.json();
+    return safeJson(res);
   },
 
   // Admin Portal endpoints
   async getAdminStats(): Promise<ApiResponse<any>> {
     const headers = await getAuthHeaders();
     const res = await fetch(`${API_BASE_URL}/admin/stats`, { headers });
-    return res.json();
+    return safeJson(res);
   },
 
   async getAdminUsers(): Promise<ApiResponse<any[]>> {
     const headers = await getAuthHeaders();
     const res = await fetch(`${API_BASE_URL}/admin/users`, { headers });
-    return res.json();
+    return safeJson(res);
   },
 
   async getAdminTemplates(): Promise<ApiResponse<any[]>> {
     const headers = await getAuthHeaders();
     const res = await fetch(`${API_BASE_URL}/admin/templates`, { headers });
-    return res.json();
+    return safeJson(res);
   },
 
   async importAdminTemplate(payload: {
@@ -262,7 +276,7 @@ export const api = {
       headers,
       body: JSON.stringify(payload),
     });
-    return res.json();
+    return safeJson(res);
   },
 
   async deleteAdminTemplate(id: string): Promise<ApiResponse<void>> {
@@ -271,13 +285,13 @@ export const api = {
       method: 'DELETE',
       headers,
     });
-    return res.json();
+    return safeJson(res);
   },
 
   async getAdminLogs(): Promise<ApiResponse<any[]>> {
     const headers = await getAuthHeaders();
     const res = await fetch(`${API_BASE_URL}/admin/logs`, { headers });
-    return res.json();
+    return safeJson(res);
   },
 
   // Assets Upload API
@@ -291,7 +305,7 @@ export const api = {
       headers,
       body: formData,
     });
-    return res.json();
+    return safeJson(res);
   },
 
   // GIF Ticker Generation API
@@ -308,6 +322,6 @@ export const api = {
       headers,
       body: JSON.stringify(payload),
     });
-    return res.json();
+    return safeJson(res);
   },
 };

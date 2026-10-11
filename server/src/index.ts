@@ -48,7 +48,7 @@ app.use(express.json({ limit: '5mb' }));
 app.use(express.urlencoded({ extended: true, limit: '5mb' }));
 
 // Health Check
-app.get('/api/health', (_req, res) => {
+app.get(['/api/health', '/health'], (_req, res) => {
   res.json({
     status: 'ok',
     timestamp: new Date().toISOString(),
@@ -57,15 +57,15 @@ app.get('/api/health', (_req, res) => {
 });
 
 // API Routes
-app.use('/api/templates', templateRoutes);
-app.use('/api/email', emailRoutes);
-app.use('/api/import', importRoutes);
-app.use('/api/profile', profileRoutes);
-app.use('/api/auth', authRoutes);
-app.use('/api/bulk', bulkRoutes);
-app.use('/api/admin', adminRoutes);
-app.use('/api/assets', assetRoutes);
-app.use('/api/gif', gifRoutes);
+app.use(['/api/templates', '/templates'], templateRoutes);
+app.use(['/api/email', '/email'], emailRoutes);
+app.use(['/api/import', '/import'], importRoutes);
+app.use(['/api/profile', '/profile'], profileRoutes);
+app.use(['/api/auth', '/auth'], authRoutes);
+app.use(['/api/bulk', '/bulk'], bulkRoutes);
+app.use(['/api/admin', '/admin'], adminRoutes);
+app.use(['/api/assets', '/assets'], assetRoutes);
+app.use(['/api/gif', '/gif'], gifRoutes);
 
 // Global Error Handler
 app.use(errorHandler);
